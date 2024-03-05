@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <img src="img/Group-1.webp" alt="logo.webp" class = "logo">
+    
+    <header>
+        <div class="search-container">
+            <label for="search"></label>
+            <input type="text" id="search" placeholder="Sök efter..." oninput="filterProducts('all')">
+        </div>
+        <div id="kundvagn" class="show">
+            <h2 id="kundvagn-header">Kundvagn</h2>
+            <div class="max">
+                <ul id="cart-items"></ul>
+                <p>Total: <span id="totalpris">0 kr</span></p>
+            </div>
+        </div>
+
+    </header>
+    <nav>
+        <p class="sort" onclick="filterProducts('all')">Allt</p>
+        <p class="sort" onclick="filterProducts('mat')">Mat</p>
+        <p class="sort" onclick="filterProducts('dryck')">Dryck</p>
+        <p class="sort" onclick="filterProducts('hushåll')">Hushåll</p>
+
+    
+    </nav>
+    <main>
+        <div class="product">
+            <article class="produkter" data-category="mat" >
+                <img src="img/07340045509933_g1l1-1.webp" alt="köttfärs">
+                <p class="contents">köttfärs</p>
+                <button type="button" class="butt">
+                    
+                    <span class="button_text">85 kr</span>
+                </button>
+            
+
+
+        
+            </article>
+            <article class="produkter" data-category="mat">
+                <img src="img/672046_scan_piggh-1.webp" alt="bacon">
+                <p class="contents">bacon</p>
+                <button type="button" class="butt">
+                    <span class="button_text">15 kr</span>
+                </button>
+            </article>
+            <article class="produkter" data-category="dryck">
+                <img src="img/coca-cola-original-burk-1.webp" alt="cola">
+                <p class="contents">coca cola</p>
+                <button type="button" class="butt">
+                    <span class="button_text">11 kr</span>
+                </button>
+            </article>
+            <article class="produkter" data-category="dryck">
+                <img src="img/Rectangle-20.webp" alt="fanta">
+                <p class="contents">fanta</p>
+                <button type="button" class="butt">
+                    <span class="button_text">11 kr</span>
+                </button>
+            </article>
+            <article class="produkter" data-category="hushåll">
+                <img src="img/Rectangle-10.webp" alt="hushållpapper">
+                <p class="contents">hushållpapper</p>
+                <button type="button" class="butt">
+                    <span class="button_text">85 kr</span>
+                </button>
+            </article>
+            <article class="produkter" data-category="hushåll">
+                <img src="img/Rectangle-11.webp" alt="tvättmedel">
+                <p class="contents">tvättmedel</p>
+                <button type="button" class="butt">
+                    <span class="button_text">48 kr</span>
+                </button>
+            </article>
+        </div>
+
+
+
+
+
+    </main>
+
+    <footer>
+        <a href="./mer.html">
+            <h1 class="mer">Mer om oss</h1>
+        </a>
+        <p class="mer" id="ring">Ring: 779-889</p>
+
+
+
+    </footer>
+</body>
+</html>

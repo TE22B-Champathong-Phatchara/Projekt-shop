@@ -1,0 +1,188 @@
+
+
+
+
+
+body{
+    display: grid;
+    grid-template-columns: 10% 2fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+}
+header, nav, footer, .butt        
+{
+    background-color: #e03636;
+}
+
+nav{
+    width: 245px;
+    margin-top: 3%;
+    margin-bottom: 3.5%;
+}
+header,main
+{
+    margin-left: 3.7%;
+}
+footer
+{
+    grid-column: 1 /span 2; 
+}
+
+.sort, .mer, .butt
+{
+    color: white;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.sort
+{
+    
+    padding-left: 10%;
+    font-size: 30px;
+    cursor: pointer;
+}
+#ring
+{
+    font-size: 20px;
+}
+.mer
+{
+    text-align: end;
+    padding-right: 100px;
+    padding-top: 20px;
+}
+.search-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+.product{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    padding-left: 100px;
+    padding-right: 100px;
+    column-gap: 300px;
+    max-height: 625px;
+    overflow-y: scroll;
+}
+.produkter
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.butt
+{
+    font-size: large;
+    height: 50px;
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+input{
+    font-size: 1rem;
+}
+.contents
+{
+    display: none;
+}
+
+.show{
+    font-size: 20px;
+    color: white;
+    text-align: end;
+    padding-right: 30px;
+
+}
+.max{
+    max-height: 69px;
+    overflow-y: scroll;
+    padding-left: 200px;
+}
+p{
+    padding-right: 5px;
+}
+#kundvagn-header{
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    body {
+        grid-template-columns: 10% 2fr;
+        grid-template-rows: 1fr 3fr 1fr;
+    }
+
+    nav {
+        width: 266%;
+    }
+    .logo
+    {
+        height: 80%;
+        width: auto;
+    }
+    header
+    {
+        margin-left: 20%;
+        height: 80%;
+        
+    }
+    main{
+        margin-left:10%;
+    }
+
+    .product {
+        padding-right: 50px; 
+        column-gap: 150px; 
+    }
+}
+
+
+@media only screen and (max-width: 430px) and (max-height: 932px) and (orientation: portrait) {
+    body {
+        grid-template-columns: 29% 2fr;
+        grid-template-rows: 100px 10% 1fr;
+    }
+
+    .logo{
+        height: 100%;
+    }
+    nav {
+        width: 100%; /* Adjust width for iPhone Pro Max portrait */
+        height: 80px;
+        grid-column: 1 /span 2;
+        display: flex;
+        flex-direction: row;
+    }
+    .sort{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    header{
+        height: 100%;
+    }
+    .search-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        padding-right: 5px;
+        padding-top: 20px;
+    }
+
+
+    main {
+        grid-column: 1 /span 2;
+        margin-top: 10%;
+    }
+}
+
