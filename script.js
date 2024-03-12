@@ -73,7 +73,7 @@ for (var j = 0; j < buttons.length; j++) {
 document.getElementById("kundvagn-header").addEventListener("click", function () {
     var cartItems = document.getElementById("cart-items");
     if (cartItems.style.display === "none" || getComputedStyle(cartItems).display === "none") {
-        cartItems.style.display = "block";
+        cartItems.style.display = "";
     } else {
         cartItems.style.display = "none";
     }
