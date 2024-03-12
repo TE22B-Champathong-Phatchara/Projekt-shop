@@ -19,14 +19,29 @@ function filterProducts(category) {
     }
     console.log(category)
 }
+function addToCart(item) {
+    var cartItems = document.getElementById("cart-items");
+    var totalSpan = document.getElementById("totalpris");
 
+    var itemName = item.getElementsByClassName("contents")[0].innerText;
+    var itemPrice = parseFloat(item.getElementsByClassName("button_text")[0].innerText);
 
+    var p = document.createElement("p");
+    p.textContent = itemName + " - " + itemPrice + " kr";
 
+    var removeButton = document.createElement("button");
+    removeButton.textContent = "ta bort";
+    removeButton.addEventListener("click", function() {
+        removeFromCart(item);
+    });
 
+    p.appendChild(removeButton);
 
+    cartItems.appendChild(p);
 
-
-
+    var totalPrice = parseFloat(totalSpan.innerText) + itemPrice;
+    totalSpan.innerText = totalPrice + " kr";
+}
 
 function removeFromCart(item) {
     var cartItems = document.getElementById("cart-items");
@@ -53,29 +68,6 @@ for (var j = 0; j < buttons.length; j++) {
     buttons[j].addEventListener("click", function() {
         addToCart(this.closest(".produkter"));
     });
-}
-function addToCart(item) {
-    var cartItems = document.getElementById("cart-items");
-    var totalSpan = document.getElementById("totalpris");
-
-    var itemName = item.getElementsByClassName("contents")[0].innerText;
-    var itemPrice = parseFloat(item.getElementsByClassName("button_text")[0].innerText);
-
-    var li = document.createElement("p");
-    li.textContent = itemName + " - " + itemPrice + " kr";
-
-    var removeButton = document.createElement("button");
-    removeButton.textContent = "ta bort";
-    removeButton.addEventListener("click", function() {
-        removeFromCart(item);
-    });
-
-    li.appendChild(removeButton);
-
-    cartItems.appendChild(li);
-
-    var totalPrice = parseFloat(totalSpan.innerText) + itemPrice;
-    totalSpan.innerText = totalPrice + " kr";
 }
 
 document.getElementById("kundvagn-header").addEventListener("click", function () {
